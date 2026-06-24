@@ -236,7 +236,7 @@ h1 {
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
 
     /* ================= HEADER ================= */
     header {
@@ -250,22 +250,19 @@ h1 {
     /* ================= LOGO ================= */
     .logo {
         position: absolute;
-        width: 65px;
-        top: 15px;
-        left: 15px;
-        margin: 0;
+        width: 60px;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
     }
-
     /* ================= CADRE TITRE ================= */
     .titre-chatterie {
+        position: relative;
+        z-index: 20;
+
         margin: 0;
-        padding: 15px 15px 15px 90px; /* espace pour le logo à gauche */
-
+        padding: 15px 15px 15px 85px;
         font-size: 1rem;
-
-        width: 100%;
-        max-width: 95%;
-        box-sizing: border-box;
     }
 
     .titre-principal {
