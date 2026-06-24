@@ -238,31 +238,24 @@ h1 {
 
 @media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
 
-    /* ================= HEADER ================= */
     header {
         display: flex;
-        justify-content: center;
         align-items: center;
-        position: relative;
+        justify-content: center;
+        gap: 10px;
         padding: 10px;
     }
 
-    /* ================= LOGO ================= */
     .logo {
-        position: absolute;
+        position: static;
         width: 60px;
-        top: 10px;
-        left: 10px;
-        z-index: 50;
-    }
-    /* ================= CADRE TITRE ================= */
-    .titre-chatterie {
-        position: relative;
-        z-index: 100;
-
         margin: 0;
-        padding: 15px 15px 15px 85px;
-        font-size: 1rem;
+    }
+
+    .titre-chatterie {
+        margin: 0;
+        padding: 15px;
+        flex: 1;
     }
 
     .titre-principal {
