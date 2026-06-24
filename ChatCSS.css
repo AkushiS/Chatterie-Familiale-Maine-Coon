@@ -239,33 +239,35 @@ h1 {
 @media (max-width: 1024px) {
 
     header {
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    /* ON FAIT DU TITRE UN VRAI BLOC FLEX */
     .titre-chatterie {
-        position: relative;
-        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 15px;
 
         margin: 20px;
-        padding: 20px 20px 20px 110px;
-
-        width: fit-content;
-        max-width: 95%;
+        padding: 20px;
     }
 
+    /* LOGO DEVIENT UN ÉLÉMENT DU BLOC */
     .logo {
-        position: absolute;
-        top: 50%;
-        left: 40px;
-        transform: translateY(-50%);
-
-        width: 70px;
+        position: static;
+        width: 60px;
         height: auto;
+        transform: none;
+    }
 
-        z-index: 30;
+    /* TEXTE RESTE EN COLONNE */
+    .titre-chatterie .images-haut,
+    .titre-chatterie .sous-titre,
+    .titre-chatterie .titre-principal,
+    .titre-chatterie .region {
+        display: block;
     }
 
     .titre-principal {
