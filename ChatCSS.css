@@ -5,7 +5,7 @@
 }
 
 .logo {
-    position: static;
+    position: absolute;
     width: 300px;      /* largeur */
     height: auto;      /* garde les proportions */
     margin-left: 30px; /* décalage vers la droite */
