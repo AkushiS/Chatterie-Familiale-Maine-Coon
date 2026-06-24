@@ -1,15 +1,19 @@
  body {
+    position: relative;
     background-image: url("Images/Fond-Flouté.png");
     background-size: cover;
     margin: 0;
 }
 
-.logo {
+.logo-desktop {
     position: absolute;
-    width: 300px;      /* largeur */
-    height: auto;      /* garde les proportions */
-    margin-left: 30px; /* décalage vers la droite */
-    margin-top: 0px;  /* décalage vers le bas */
+    top: 20px;
+    left: 30px;
+    width: 300px;
+}
+
+.logo-mobile {
+    display: none;
 }
 
 header {
@@ -240,34 +244,50 @@ h1 {
 
     header {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
     }
 
-    /* ON FAIT DU TITRE UN VRAI BLOC FLEX */
     .titre-chatterie {
+        overflow: hidden;
+        flex: 1;
+        margin: 0px;
+        padding: 10px;
+        position: relative;
+        width: fit-content;
+        max-width: 95%;
+        text-align: center; /* IMPORTANT */
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 15px;
-
-        margin: 20px;
-        padding: 20px;
+        gap: 10px;
     }
 
-    /* LOGO DEVIENT UN ÉLÉMENT DU BLOC */
     .logo {
-        position: static;
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
         width: 60px;
-        height: auto;
-        transform: none;
     }
 
-    /* TEXTE RESTE EN COLONNE */
-    .titre-chatterie .images-haut,
-    .titre-chatterie .sous-titre,
-    .titre-chatterie .titre-principal,
-    .titre-chatterie .region {
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
         display: block;
+        width: 100px;
+        flex-shrink: 0;
+    }
+
+    .sous-titre,
+    .titre-principal,
+    .region {
+        display: block;
+        text-align: center;
     }
 
     .titre-principal {
@@ -285,6 +305,8 @@ h1 {
     }
 
     .images-haut {
+        display: flex;
+        justify-content: center;
         gap: 8px;
     }
 
