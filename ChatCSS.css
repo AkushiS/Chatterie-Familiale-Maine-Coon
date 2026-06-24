@@ -1,0 +1,284 @@
+ body {
+    background-image: url("Images/Fond-Flouté.png");
+    background-size: cover;
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    width: 300px;      /* largeur */
+    height: auto;      /* garde les proportions */
+    margin-left: 30px; /* décalage vers la droite */
+    margin-top: 0px;  /* décalage vers le bas */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images-haut {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* distance entre images */
+  margin-bottom: 10px; /* espace avec le h1 */
+}
+
+.images-haut img {
+  height: auto;
+    width: 50px;
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+
+.images-haut img:hover {
+  transform: scale(1.15);
+}
+
+.titre-chatterie {
+    text-align: center;
+    color: #e6d3a3;
+    font-weight: normal;
+
+    margin: 30px;
+    padding: 20px 40px;
+    font-size: 2rem;
+
+  /* effet verre */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-shadow:
+        /* contour noir */
+        -0.5px -0.5px 0 #000000,
+         0.5px -0.5px 0 #000000,
+        -0.5px  0.5px 0 #000000,
+         0.5px  0.5px 0 #000000,
+
+        /* relief */
+        0px 0px 16px#000000,
+
+        /* ombre portée */
+         5px 5px 8px rgba(0,0,0,0.5);
+}
+
+.sous-titre {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.titre-principal {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: 600; /* ou 700 */
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.region {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* ===== CARTE CHAT ===== */
+
+.card-chat {
+    width: 100%;
+    max-width: 320px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+
+    position: relative;
+
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin: 0;
+
+    padding-top: 80px; /* espace pour l’image qui dépasse */
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(8px);
+}
+
+.card-chat:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE DU CHAT QUI DÉPASSE */
+.chat-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 5px solid white;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* TEXTE DANS LA CARTE */
+.card-info {
+    text-align: center;
+    padding: 10px 20px 25px;
+}
+
+.card-info h2 {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    color: #333;
+}
+
+.card-info p {
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    justify-items: center;
+    margin-top: 120px;
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 500px;
+    height: 800px;
+
+    text-align: center;
+    font-size: 30px;
+
+    position: relative;
+
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content img {
+    width: 500px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.card-chat {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card-chat:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 150px;
+        margin-left: 10px;
+    }
+
+    .titre-principal {
+        font-size: 45px;
+    }
+
+    .sous-titre {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .region {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+
+    .images-haut {
+        gap: 8px;
+    }
+
+    .images-haut img {
+        width: 25px;
+    }
+
+    .card-chat {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .modal-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}

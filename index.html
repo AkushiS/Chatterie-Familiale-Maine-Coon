@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chatterie Maine Coon">
+<title>Chatterie Maine Coon</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ChatCSS.css"/>
+<link rel="icon" type="Images/png" href="Images/Logo-Chatterie1.png">
+</head>
+
+<body>
+
+    <img class= "logo" src="Images/Logo-ChatterieTransName.png">
+
+<header>
+
+<h1 class="titre-chatterie">
+    <div class="images-haut">
+        <img src="Images/Etoiles2.png" alt="">
+        <img src="Images/Etoiles2.png" alt="">
+        <img src="Images/Etoiles2.png" alt="">
+        <img src="Images/Etoiles2.png" alt="">
+        <img src="Images/Etoiles2.png" alt="">
+    </div>
+
+    <span class="sous-titre">CHATTERIE FAMILIALE</span>
+    <span class="titre-principal">MAINE COON</span>
+    <span class="region">BRETAGNE</span>
+</h1>
+</header>
+
+<main>
+
+    <div class="cards-container">
+
+    <div class="card-chat"
+     onclick="openModal(
+        'Axoloto',
+        'Âge : 1 ans',
+        'Sexe : Mâle',
+        'Doux, joueur, sociable',
+        'Images/AxoHead.png'
+     )">
+
+      <img class="chat-img" src="Images/AxoHead.png" alt="Chat Maine Coon">
+
+      <div class="card-info">
+        <h2>Axoloto</h2>
+        <p>Âge : 1 ans</p>
+        <p>Sexe : Mâle</p>
+        <p>Caractère : Doux, joueur, sociable</p>
+      </div>
+
+    </div>
+
+    <div class="card-chat"
+     onclick="openModal(
+        'Athéna',
+        'Âge : 6 mois',
+        'Sexe : Femelle',
+        'Calme et affectueuse',
+        'Images/AthénaHead.png'
+     )">
+
+      <img class="chat-img" src="Images/AthénaHead.png" alt="Chat Maine Coon">
+
+      <div class="card-info">
+        <h2>Athéna</h2>
+        <p>Âge : 6 mois</p>
+        <p>Sexe : Femelle</p>
+        <p>Caractère : Calme et affectueuse</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    
+    <img id="modal-img" src="" alt="Chat">
+
+    <div class="modal-info">
+      <h2 id="modal-name"></h2>
+      <p id="modal-age"></p>
+      <p id="modal-sex"></p>
+      <p id="modal-desc"></p>
+    </div>
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+  </div>
+</div>
+
+<script>
+function openModal(name, age, sex, desc, img) {
+    document.getElementById("modal").style.display = "flex";
+
+    document.getElementById("modal-name").innerText = name;
+    document.getElementById("modal-age").innerText = age;
+    document.getElementById("modal-sex").innerText = sex;
+    document.getElementById("modal-desc").innerText = desc;
+    document.getElementById("modal-img").src = img;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+/* Fermer en cliquant à l'extérieur du modal */
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+</script>
+
+</body>
+</html>
