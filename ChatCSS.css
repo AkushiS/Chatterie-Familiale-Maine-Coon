@@ -239,23 +239,27 @@ h1 {
 @media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
 
     header {
+        position: relative;
         display: flex;
-        align-items: center;
         justify-content: center;
-        gap: 10px;
+        align-items: center;
         padding: 10px;
     }
 
     .logo {
-        position: static;
+        position: absolute;   /* IMPORTANT : on garde absolute */
         width: 60px;
-        margin: 0;
+        top: 15px;
+        left: 15px;
+        z-index: 10;
     }
 
     .titre-chatterie {
+        position: relative;
+        z-index: 20;
+
         margin: 0;
-        padding: 15px;
-        flex: 1;
+        padding: 15px 15px 15px 90px; /* espace pour le logo */
     }
 
     .titre-principal {
