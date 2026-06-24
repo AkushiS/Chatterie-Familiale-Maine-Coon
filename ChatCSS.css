@@ -238,23 +238,40 @@ h1 {
 
 @media (max-width: 768px) {
 
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
     .logo {
-        width: 150px;
-        margin-left: 10px;
+        position: static;   /* enlève le absolute */
+        width: 80px;
+        margin: 0;
+    }
+
+    .titre-chatterie {
+        margin: 0;
+        padding: 10px 15px;
+        font-size: 1rem;
+        flex: 1; /* prend l’espace restant */
     }
 
     .titre-principal {
-        font-size: 45px;
+        font-size: 28px;
     }
 
     .sous-titre {
-        font-size: 14px;
-        letter-spacing: 3px;
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
     .region {
-        font-size: 16px;
-        letter-spacing: 4px;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
     .images-haut {
