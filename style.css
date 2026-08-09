@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-green: #679f88;
+  --green: #355b4c;
+  --beige: #efe7d6;
+  --text: #38433d;
+  --white: #fff;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background: #faf8f3;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #679f88;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.logo p {
+  display: flex;
+  align-self: end;
+  color: #f4dcae;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--green);
+  margin: 5px 0;
+}
+
+.presentation {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.presentation h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  color: var(--green);
+}
+
+.citation {
+  margin-top: 2rem;
+  font-family: "Parisienne", cursive;
+  font-size: 2rem;
+}
+
+.separator {
+  margin: 2rem auto;
+  width: 120px;
+  height: 2px;
+  background: var(--green);
+  position: relative;
+}
+
+.separator span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem 4rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--green);
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card.beige {
+  background: var(--beige);
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
