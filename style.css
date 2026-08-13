@@ -103,6 +103,54 @@ body {
   color: var(--green);
 }
 
+.icon_h1 {
+  display: inline-flex;
+  margin-top: 120px;
+  margin-left: 20%;
+  align-items: center;
+  gap: 10px;
+}
+
+.story img {
+  width: clamp(30px, 3vw, 50px);
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.philo img {
+  width: clamp(25px, 2.5vw, 41.5px);
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.chatons img {
+  width: clamp(25px, 2.5vw, 41.5px);
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.contact img {
+  width: clamp(30px, 3vw, 50px);
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.haut_de_page h1 {
+  display: inline-flex;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  align-items: center;
+}
+
+.haut_de_page p {
+  margin-left: 20%;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .citation {
   margin-top: 2rem;
   font-family: "Parisienne", cursive;
