@@ -356,7 +356,7 @@ body {
 
 .dropdown-menu li {
   /*background-color: var(--main-green);*/
-  background-image: url("../Images/background-wood-1.png");
+  background-image: url("./Images/background-wood-1.png");
   background-size: 100% 400%;
   border-radius: 50px;
   border: 2px solid var(--green);
@@ -403,7 +403,7 @@ body {
   width: 35px;
   height: 35px;
 
-  background-image: url("../Images/icon_pattes.png");
+  background-image: url("./Images/icon_pattes.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
